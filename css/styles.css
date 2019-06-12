@@ -7,23 +7,12 @@ header#header {
   height: 150px;
   background: #52aa8af2;
 }
-header#header #logo-section {
-  width: 30%;
-  margin: 0 auto;
-}
-header#header #logo-section .logo-link {
+header#header div.row #logo-section a.logo-link .website-logo {
+  max-height: 150px;
   display: block;
 }
-header#header #logo-section .logo-link img {
-  width: 30%;
-  height: 100px;
-}
-header#header #logo-section .logo-link span.header-logo-site-name {
+header#header div.row #logo-section a.logo-link .header-logo-site-name {
   color: gold;
-  font-size: 20px;
-  font-weight: bold;
-  position: relative;
-  top: 5px;
 }
 .custom {
   color: white;
