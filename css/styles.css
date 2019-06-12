@@ -5,14 +5,14 @@ header#header {
   padding: 0px;
   width: 100%;
   height: 150px;
+  position: fixed;
+  z-index: 9999;
   background: #52aa8af2;
 }
-header#header div.row #logo-section a.logo-link .website-logo {
-  max-height: 150px;
-  display: block;
-}
-header#header div.row #logo-section a.logo-link .header-logo-site-name {
-  color: gold;
+header#header div.row {
+  background-color: #424342;
+  max-height: 25px;
+  height: 20px;
 }
 .custom {
   color: white;
@@ -30,11 +30,4 @@ a {
 }
 a:hover {
   text-decoration: none;
-}
-html body {
-  margin: 0;
-  padding: 0;
-}
-div {
-  padding: 0;
 }
