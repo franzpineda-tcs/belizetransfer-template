@@ -1,15 +1,92 @@
 header#header{
     padding: 0px;
     width: 100%;
-    height: 150px; 
+    height: 200px; 
     position: fixed;
     z-index: 9999;
-    //background: @bg-color-secondary-transparent;
-    background: black;
+    background: @bg-color-secondary-transparent;
 
     div.row{
-        background-color: @bg-color-dark;
-        max-height: 25px;
-        height: 20px;
+        //background-color: @bg-color-dark;
+        background-color: rgba(0, 0, 0, .5);//#626362;
+        max-height: 75px;
+        height: 75px;
+    }
+
+    //Header address section
+    .row.header-info{
+        padding: 0 0 0 20px;
+        .header-address-section{
+            .address {
+                >span {
+                    color: white;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    //Header Social Section
+    .header-social{
+        >a{
+            width: 24%;
+            display: inline-block;
+            text-align: center;
+            margin: 20px 0 0 0;
+
+            .fa{
+                font-size: 40px;
+            }
+        }
+        .facebook-icon{
+            color: #3b5998;
+
+            :hover{
+                //color: #3b5998;
+            }
+        }
+        .instagram-icon{
+            color: #C13584;//white;
+
+            :hover{
+                //color: #C13584;
+            }
+        }
+        .twitter-icon{
+            color: #38A1F3; //white;
+
+            :hover{
+                //color: #38A1F3;
+            }
+        }
+        .youtube-icon{
+            color: #ff2424; //white;
+
+            :hover{
+                color: #ff0000;
+            }
+        }
+
+    }
+
+    //Header contact section
+    .header-contact{
+        >a{
+            width: 47%;
+            display: inline-block;
+            text-align: center;
+            margin: 30px 0 0 0;
+            font-size: 15px;
+            color: white;
+        }
+        a:first-child{
+            :after{
+                content: "|";
+                display: inline-block;
+                position: relative;
+                left: 125px;
+            }
+        }
     }
 }
