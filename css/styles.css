@@ -1,6 +1,20 @@
 div {
   content: "eg";
 }
+body {
+  background-image: url(https://images.pexels.com/photos/1033729/pexels-photo-1033729.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: #32cd32;
+  transition: all ease-in-out 0.3s;
+}
+a:hover {
+  text-decoration: none;
+}
 header#header {
   padding: 0px;
   width: 100%;
@@ -10,7 +24,7 @@ header#header {
   background: rgba(82, 170, 138, 0.82);
 }
 header#header div.header-info.row {
-  background-color: #424342;
+  background-color: rgba(0, 0, 0, 0.5);
   max-height: 75px;
   height: auto;
 }
@@ -60,20 +74,70 @@ header#header .header-contact a:first-child :after {
   position: relative;
   left: 125px;
 }
-.custom {
-  color: white;
-}
-body {
-  background-image: url(https://images.pexels.com/photos/1033729/pexels-photo-1033729.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940);
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-}
-a {
-  text-decoration: none;
-  color: #32cd32;
+#side-nav {
+  position: fixed;
+  width: 200px;
+  top: 200px;
+  bottom: 0;
+  background: rgba(82, 170, 138, 0.82);
+  border: solid 1px white;
   transition: all ease-in-out 0.3s;
 }
-a:hover {
-  text-decoration: none;
+#side-nav div .nav-toggle-view {
+  background-color: rgba(82, 170, 138, 0.82);
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  border-left: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  left: 199px;
+  bottom: 6px;
+  float: left;
+  transition: all ease-in-out 0.3s;
+}
+#side-nav div .nav-toggle-view span.fa {
+  color: white;
+}
+#side-nav div .nav-toggle-view.toggle--true {
+  background: #424342;
+}
+#side-nav div .nav-toggle-view.toggle--true:hover {
+  background: rgba(82, 170, 138, 0.82);
+}
+#side-nav div .nav-toggle-view.toggle--false {
+  background: rgba(82, 170, 138, 0.82);
+}
+#side-nav div .nav-toggle-view.toggle--false:hover {
+  background: #424342;
+}
+#side-nav div ul {
+  padding: 0;
+  list-style: none;
+}
+#side-nav div ul li a {
+  display: block;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: rgba(82, 170, 138, 0.95);
+  transition: all ease-in-out 0.3s;
+}
+#side-nav div ul li a:hover {
+  background: #424342;
+}
+#side-nav.hide {
+  left: -200px;
+}
+#side-nav.show {
+  left: 0px;
+}
+.custom {
+  color: white;
 }

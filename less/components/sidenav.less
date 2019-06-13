@@ -1,0 +1,76 @@
+#side-nav{
+    position: fixed;
+    width: 200px;
+    top: 200px;
+    bottom: 0;
+    background: @bg-color-secondary-transparent;
+    border:solid 1px white;
+    transition: all ease-in-out 0.3s;
+
+
+    div{
+        .nav-toggle-view{
+            background-color: @bg-color-secondary-transparent;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            border-left: none;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px 10px;
+            position: relative;
+            left: 199px;
+            bottom: 6px;
+            float: left;
+            transition: all ease-in-out 0.3s;
+
+            span.fa{
+                color: white;
+            }
+        }
+        .nav-toggle-view.toggle{
+            &--true{
+                background: @bg-color-dark;
+                &:hover{
+                    background: @bg-color-secondary-transparent;
+                }
+            }
+            &--false{
+                background: @bg-color-secondary-transparent;
+                &:hover{
+                    background: @bg-color-dark;
+                }
+            }
+        }
+
+        ul{
+            padding: 0;
+            list-style: none;
+            li{
+                a{
+                    display: block;
+                    text-align: center;
+                    color: @font-color-primary;
+                    text-transform: uppercase;
+                    border: 1px solid @font-color-primary;
+                    padding: 5px;
+                    margin: 5px;
+                    border-radius: 5px;
+                    background: @bg-color-secondary-transparent-onine;
+                    transition: all ease-in-out 0.3s;
+
+                    &:hover{
+                        background: @bg-color-dark;
+                    }
+                }
+            }
+        }
+
+    }
+}
+#side-nav.hide{
+    left: -200px;
+}
+#side-nav.show{
+    left: 0px;
+}
