@@ -7,12 +7,12 @@ header#header {
   height: 200px;
   position: fixed;
   z-index: 9999;
-  background: #52aa8af2;
+  background: rgba(82, 170, 138, 0.82);
 }
-header#header div.row {
-  background-color: rgba(0, 0, 0, 0.5);
+header#header div.header-info.row {
+  background-color: #424342;
   max-height: 75px;
-  height: 75px;
+  height: auto;
 }
 header#header .row.header-info {
   padding: 0 0 0 20px;
