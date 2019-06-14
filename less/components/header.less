@@ -17,11 +17,40 @@ header#header{
     .row.header-info{
         padding: 0 0 0 20px;
         .header-address-section{
+
+            @media(max-width: @screen-sm-min){
+                display: inline-block;
+                width: auto;
+            }
+
             .address {
+                .location-icon{
+                    display: none;
+
+                    @media(max-width: @screen-xs){
+                        display: block;
+                    }
+                    >a{
+                        font-size: 35px;
+                        color: white;
+                    }
+                }
                 >span {
                     color: white;
                     font-weight: 600;
-                    font-size: 15px;
+                    //font-size: 15px;
+                    @media(max-width: @screen-xs){
+                        display: none;
+                    }
+                    @media(min-width: @screen-sm-min){
+                        font-size: 12px;
+                    }
+                    @media(min-width: @screen-md-min){
+                        font-size: 14px
+                    }
+                    @media(min-width: @screen-lg-min){
+                        font-size: 16px
+                    }
                 }
             }
         }
@@ -29,11 +58,20 @@ header#header{
 
     //Header Social Section
     .header-social{
+        @media(max-width: @screen-sm-min){
+            display: inline-block;
+            width: auto;
+        }
         >a{
-            width: 24%;
+            width: 20%;
             display: inline-block;
             text-align: center;
             margin: 20px 0 0 0;
+
+            @media(max-width: @screen-xs){
+                width: auto;
+                margin: 5px 5px 0 5px;
+            }
 
             .fa{
                 font-size: 40px;
@@ -41,51 +79,48 @@ header#header{
         }
         .facebook-icon{
             color: #3b5998;
-
-            &:hover{
-                //color: #3b5998;
-            }
         }
         .instagram-icon{
             color: #C13584;//white;
-
-            :hover{
-                //color: #C13584;
-            }
         }
         .twitter-icon{
             color: #38A1F3; //white;
-
-            :hover{
-                //color: #38A1F3;
-            }
         }
         .youtube-icon{
             color: #ff2424; //white;
-
-            :hover{
-                color: #ff0000;
-            }
         }
 
     }
 
     //Header contact section
     .header-contact{
-        >a{
-            width: 47%;
+        @media(max-width: @screen-sm-min){
             display: inline-block;
-            text-align: center;
-            margin: 30px 0 0 0;
-            font-size: 15px;
-            color: white;
+            width: auto;
         }
-        a:first-child{
-            :after{
-                content: "|";
+        >a{
+            text-align: center;
+            color: white;
+            @media(min-width: @screen-sm-min){
+                width: 100%;
+                display: block;
+                font-size: 14px;
+            }
+            @media(min-width: @screen-lg-min){
+                width: 45%;
+                font-size: 14px;
                 display: inline-block;
-                position: relative;
-                left: 125px;
+                margin: 30px 0 0 0;
+            }
+        }
+        .header-phone{
+            :after{
+                @media(min-width: @screen-lg-min){
+                    content: "|";
+                    display: inline-block;
+                    position: relative;
+                    left: 120px;
+                }
             }
         }
     }
