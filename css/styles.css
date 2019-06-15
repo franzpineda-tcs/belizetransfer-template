@@ -1,6 +1,13 @@
 div {
   content: "eg";
 }
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nBrXk.ttf) format('truetype');
+}
 body {
   background-image: url(https://images.pexels.com/photos/1033729/pexels-photo-1033729.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-attachment: fixed;
@@ -15,13 +22,31 @@ a {
 a:hover {
   text-decoration: none;
 }
+.klan-text-align--center {
+  text-align: center;
+}
+.klan-text-align--left {
+  text-align: left;
+}
+.klan-text-align--right {
+  text-align: right;
+}
+.klan-text-transform--uppercase {
+  text-transform: uppercase;
+}
+.klan-text-transform--lowercase {
+  text-transform: lowercase;
+}
+.klan-text-bold {
+  font-weight: bold;
+}
 header#header {
   padding: 0px;
   width: 100%;
   height: 200px;
   position: fixed;
   z-index: 9999;
-  background: rgba(82, 170, 138, 0.82);
+  background: #3aaed8d1;
 }
 header#header div.header-info.row {
   background-color: rgba(0, 0, 0, 0.5);
@@ -144,9 +169,14 @@ header#header .header-contact > a {
   width: 200px;
   top: 200px;
   bottom: 0;
-  background: rgba(82, 170, 138, 0.82);
+  background: #3aaed8d1;
   border: solid 1px white;
   transition: all ease-in-out 0.3s;
+}
+@media (max-height: 486px) {
+  #side-nav {
+    overflow-y: scroll;
+  }
 }
 @media (max-width: 768px) {
   #side-nav div {
@@ -154,7 +184,7 @@ header#header .header-contact > a {
   }
 }
 #side-nav div .nav-toggle-view {
-  background-color: rgba(82, 170, 138, 0.82);
+  background-color: #3aaed8d1;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
@@ -162,20 +192,22 @@ header#header .header-contact > a {
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   padding: 5px 10px;
-  position: relative;
-  left: 199px;
-  bottom: 6px;
-  float: left;
+  position: fixed;
+  left: 0px;
+  top: 200px;
   transition: all ease-in-out 0.3s;
 }
 #side-nav div .nav-toggle-view span.fa {
   color: white;
+  font-family: 'Rubik', sans-serif;
 }
 #side-nav div .nav-toggle-view.toggle--true {
+  left: 200px;
   background: #424342;
 }
 @media (max-width: 768px) {
   #side-nav div .nav-toggle-view.toggle--true {
+    position: relative;
     border: solid 1px white;
     border-radius: 5px;
     left: -4px;
@@ -185,10 +217,10 @@ header#header .header-contact > a {
   }
 }
 #side-nav div .nav-toggle-view.toggle--true:hover {
-  background: rgba(82, 170, 138, 0.82);
+  background: #3aaed8d1;
 }
 #side-nav div .nav-toggle-view.toggle--false {
-  background: rgba(82, 170, 138, 0.82);
+  background: #3aaed8d1;
 }
 #side-nav div .nav-toggle-view.toggle--false:hover {
   background: #424342;
@@ -206,7 +238,7 @@ header#header .header-contact > a {
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
-  background: rgba(82, 170, 138, 0.95);
+  background: #3aaed8;
   transition: all ease-in-out 0.3s;
 }
 #side-nav div ul li a:hover {

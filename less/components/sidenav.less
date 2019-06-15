@@ -3,10 +3,13 @@
     width: 200px;
     top: 200px;
     bottom: 0;
-    background: @bg-color-secondary-transparent;
+    background: @bg-color-primary-transparent;
     border:solid 1px white;
     transition: all ease-in-out 0.3s;
-
+    
+    @media(max-height:486px){
+        overflow-y: scroll;
+    }
 
 
     div{
@@ -14,7 +17,7 @@
             text-align: right; 
         }
         .nav-toggle-view{
-            background-color: @bg-color-secondary-transparent;
+            background-color: @bg-color-primary-transparent;
             border-right: 1px solid white;
             border-bottom: 1px solid white;
             border-top: 1px solid white;
@@ -22,20 +25,23 @@
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
             padding: 5px 10px;
-            position: relative;
-            left: 199px;
-            bottom: 6px;
-            float: left;
+            position: fixed;
+            left: 0px;
+            top: 200px;
             transition: all ease-in-out 0.3s;
 
 
             span.fa{
                 color: white;
+                font-family: @font-buttons;
             }
         }
         .nav-toggle-view.toggle{
+
             &--true{
+                left: 200px;
                 @media(max-width:@screen-sm-min){
+                    position: relative;
                     border: solid 1px white;
                     border-radius: 5px;
                     left: -4px;
@@ -46,11 +52,11 @@
                 }
                 background: @bg-color-dark;
                 &:hover{
-                    background: @bg-color-secondary-transparent;
+                    background: @bg-color-primary-transparent;
                 }
             }
             &--false{
-                background: @bg-color-secondary-transparent;
+                background: @bg-color-primary-transparent;
                 &:hover{
                     background: @bg-color-dark;
                 }
@@ -70,7 +76,7 @@
                     padding: 5px;
                     margin: 5px;
                     border-radius: 5px;
-                    background: @bg-color-secondary-transparent-onine;
+                    background: @bg-color-primary;
                     transition: all ease-in-out 0.3s;
 
                     &:hover{
