@@ -9,119 +9,42 @@ header#header{
     div.header-info.row{
         //background-color: @bg-color-dark;
         background-color: rgba(0, 0, 0, .5);//#626362;
-        max-height: 75px;
+        max-height: 50px;
         height: auto;
-    }
 
-    //Header address section
-    .row.header-info{
-        padding: 0 0 0 20px;
-        .header-address-section{
-
-            @media(max-width: @screen-sm-min){
-                display: inline-block;
-                width: auto;
-            }
-
-            .address {
-                .location-icon{
-                    display: none;
-
-                    @media(max-width: @screen-xs){
-                        display: block;
-                    }
-                    >a{
-                        font-size: 35px;
-                        color: white;
-                    }
-                }
-                >span {
-                    color: white;
-                    font-weight: 600;
-                    //font-size: 15px;
-                    @media(max-width: @screen-xs){
-                        display: none;
-                    }
-                    @media(min-width: @screen-sm-min){
-                        font-size: 12px;
-                    }
-                    @media(min-width: @screen-md-min){
-                        font-size: 14px
-                    }
-                    @media(min-width: @screen-lg-min){
-                        font-size: 16px
-                    }
-                }
-            }
-        }
-    }
-
-    //Header Social Section
-    .header-social{
-        @media(max-width: @screen-sm-min){
+        //header address section
+        .address{
             display: inline-block;
             width: auto;
-        }
-        >a{
-            width: 20%;
-            display: inline-block;
-            text-align: center;
-            margin: 20px 0 0 0;
+            margin: 0 0 0 20px;
 
-            @media(max-width: @screen-xs){
-                width: auto;
-                margin: 5px 5px 0 5px;
-            }
-
-            .fa{
-                font-size: 40px;
+            span {
+                font-weight: 600;
+                color: white;
+                font-size: 14px;
+                margin: 0 5px 0 0;
             }
         }
-        .facebook-icon{
-            color: #3b5998;
-        }
-        .instagram-icon{
-            color: #C13584;//white;
-        }
-        .twitter-icon{
-            color: #38A1F3; //white;
-        }
-        .youtube-icon{
-            color: #ff2424; //white;
-        }
 
-    }
-
-    //Header contact section
-    .header-contact{
-        @media(max-width: @screen-sm-min){
+        //header contact section
+        .header-contact {
             display: inline-block;
             width: auto;
-        }
-        >a{
-            text-align: center;
-            color: white;
-            @media(min-width: @screen-sm-min){
-                width: 100%;
-                display: block;
+            position: absolute;
+            right: 20px;
+            
+            a{
+                color: white;
                 font-size: 14px;
+                font-weight: 600;
             }
-            @media(min-width: @screen-lg-min){
-                width: 45%;
+            span{
+                color: white;
                 font-size: 14px;
-                display: inline-block;
-                margin: 30px 0 0 0;
-            }
-        }
-        .header-phone{
-            :after{
-                @media(min-width: @screen-lg-min){
-                    content: "|";
-                    display: inline-block;
-                    position: relative;
-                    left: 120px;
-                }
+                margin: 0 5px 0 5px;
             }
         }
     }
+
+    
 }
