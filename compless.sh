@@ -1,3 +1,3 @@
 echo "[+] compiling less..."
-lessc less/styles.less css/styles.css
+lessc -clean-css styles/styles.less public/css/styles.css
 echo "[+] done compiling less..."

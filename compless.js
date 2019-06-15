@@ -1,13 +1,13 @@
 const fs = require('fs')
 const {exec} = require('child_process'),
-watch_path = 'less/',
+watch_path = 'styles/',
 call  = {
     start:function(){
         console.log('[+++++++++++++++++++++++]')
         console.log('[+ LESS WATCHER V1.0.2 +]')
         console.log('[+++++++++++++++++++++++]')
         console.log('')
-        console.log('[+] Watching less/*.less files...')
+        console.log('[+] Watching styles/*.less files...')
     },
     watch_handler: function(e,filename){
         if(e == "change"){
