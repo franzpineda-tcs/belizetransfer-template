@@ -148,6 +148,11 @@ header#header .header-contact > a {
   border: solid 1px white;
   transition: all ease-in-out 0.3s;
 }
+@media (max-width: 768px) {
+  #side-nav div {
+    text-align: right;
+  }
+}
 #side-nav div .nav-toggle-view {
   background-color: rgba(82, 170, 138, 0.82);
   border-right: 1px solid white;
@@ -168,6 +173,16 @@ header#header .header-contact > a {
 }
 #side-nav div .nav-toggle-view.toggle--true {
   background: #424342;
+}
+@media (max-width: 768px) {
+  #side-nav div .nav-toggle-view.toggle--true {
+    border: solid 1px white;
+    border-radius: 5px;
+    left: -4px;
+    top: 2px;
+    bottom: 0px;
+    float: none;
+  }
 }
 #side-nav div .nav-toggle-view.toggle--true:hover {
   background: rgba(82, 170, 138, 0.82);
@@ -202,6 +217,14 @@ header#header .header-contact > a {
 }
 #side-nav.show {
   left: 0px;
+}
+@media (max-width: 768px) {
+  #side-nav.show {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+  }
 }
 .custom {
   color: white;

@@ -8,7 +8,11 @@
     transition: all ease-in-out 0.3s;
 
 
+
     div{
+        @media(max-width:@screen-sm-min){
+            text-align: right; 
+        }
         .nav-toggle-view{
             background-color: @bg-color-secondary-transparent;
             border-right: 1px solid white;
@@ -24,12 +28,22 @@
             float: left;
             transition: all ease-in-out 0.3s;
 
+
             span.fa{
                 color: white;
             }
         }
         .nav-toggle-view.toggle{
             &--true{
+                @media(max-width:@screen-sm-min){
+                    border: solid 1px white;
+                    border-radius: 5px;
+                    left: -4px;
+                    top: 2px;
+                    bottom: 0px;
+                    float: none;
+                    
+                }
                 background: @bg-color-dark;
                 &:hover{
                     background: @bg-color-secondary-transparent;
@@ -73,4 +87,10 @@
 }
 #side-nav.show{
     left: 0px;
+    @media(max-width:@screen-sm-min){
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+    }
 }
