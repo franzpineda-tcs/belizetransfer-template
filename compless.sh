@@ -1,3 +1,3 @@
-echo "[+] compiling less..."
-lessc styles/styles.less public/css/styles.css
-echo "[+] done compiling less..."
+echo "[compless.sh][+] compiling less..."
+lessc -clean-css styles/styles.less public/css/styles.css
+echo "[compless.sh][+] done compiling less..."

@@ -12,12 +12,17 @@ call  = {
     watch_handler: function(e,filename){
         if(e == "change"){
             console.log('[+] '+filename + " has been changed...")
-            console.log("[+] compiling less...")
             exec('sh compless.sh',(err,stdout,stderr)=>{
                         if(err){
+                            console.log('an error occurred:')
                             console.error('error',err)
                         }
+                        else if(stderr){
+                            console.log("Found Errors in your less:")
+                            console.log(stderr)
+                        }
                         else{
+                            console.log(stdout)
                             console.log('[+] Files updated....resuming watch...')
                         }
             })
